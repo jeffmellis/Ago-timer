@@ -2,6 +2,7 @@ import Foundation
 
 class Stopwatch: Identifiable, ObservableObject {
     let id: UUID
+    @Published var name: String = ""
     @Published private(set) var isRunning = false
     @Published private(set) var pausedAtDate: Date?
 

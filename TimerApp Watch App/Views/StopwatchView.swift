@@ -3,10 +3,29 @@ import SwiftUI
 struct StopwatchView: View {
     @ObservedObject var stopwatch: Stopwatch
     @State private var showingEditSheet = false
+    @State private var showingNameInput = false
 
     var body: some View {
         TimelineView(.animation(minimumInterval: 1.0 / 30.0, paused: !stopwatch.isRunning)) { _ in
             VStack(spacing: 6) {
+                HStack {
+                    if stopwatch.name.isEmpty {
+                        Button(action: { showingNameInput = true }) {
+                            Image(systemName: "tag")
+                                .font(.system(size: 11))
+                        }
+                        .buttonStyle(.plain)
+                        .foregroundStyle(.white)
+                    } else {
+                        Text(stopwatch.name)
+                            .font(.system(size: 12))
+                            .foregroundStyle(.secondary)
+                            .lineLimit(1)
+                            .onTapGesture { showingNameInput = true }
+                    }
+                    Spacer()
+                }
+
                 Spacer()
 
                 timeDisplay
@@ -33,6 +52,9 @@ struct StopwatchView: View {
         }
         .sheet(isPresented: $showingEditSheet) {
             EditTimeView(stopwatch: stopwatch)
+        }
+        .sheet(isPresented: $showingNameInput) {
+            NameInputView(name: $stopwatch.name)
         }
     }
 

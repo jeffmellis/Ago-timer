@@ -13,6 +13,7 @@
 		7E5024CD700F1E84F8EA8999 /* EditTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B221D14E3738818B26C6B42A /* EditTimeView.swift */; };
 		8A9F062E353ACCF7504CC056 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425B9315320F0258C4FFA05A /* ContentView.swift */; };
 		8F91851D3B857FFF8AF9C796 /* StopwatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23B328D14BC583EE0D8C96 /* StopwatchModel.swift */; };
+		950980BD0BCA3FBA17EF9AEE /* NameInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE00283EB359CDEBAF79FA1 /* NameInputView.swift */; };
 		9816AAC751FF11134D17B2A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA5691DE73029FF4181B3C08 /* Assets.xcassets */; };
 		C6FFBD14E3E03218FE1EE32E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A86A7E464C090EDEBF639197 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,7 @@
 		8E23B328D14BC583EE0D8C96 /* StopwatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchModel.swift; sourceTree = "<group>"; };
 		A86A7E464C090EDEBF639197 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B221D14E3738818B26C6B42A /* EditTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTimeView.swift; sourceTree = "<group>"; };
+		BDE00283EB359CDEBAF79FA1 /* NameInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameInputView.swift; sourceTree = "<group>"; };
 		C25311EF70361D54E23EF8AF /* StopwatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchView.swift; sourceTree = "<group>"; };
 		D173BBC04AB08FF07B69AA23 /* TimerAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerAppApp.swift; sourceTree = "<group>"; };
 		FA5691DE73029FF4181B3C08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				B221D14E3738818B26C6B42A /* EditTimeView.swift */,
+				BDE00283EB359CDEBAF79FA1 /* NameInputView.swift */,
 				C25311EF70361D54E23EF8AF /* StopwatchView.swift */,
 			);
 			path = Views;
@@ -153,6 +156,7 @@
 			files = (
 				8A9F062E353ACCF7504CC056 /* ContentView.swift in Sources */,
 				7E5024CD700F1E84F8EA8999 /* EditTimeView.swift in Sources */,
+				950980BD0BCA3FBA17EF9AEE /* NameInputView.swift in Sources */,
 				36FB0570CE970A62A02651BB /* StopwatchManager.swift in Sources */,
 				8F91851D3B857FFF8AF9C796 /* StopwatchModel.swift in Sources */,
 				274AAB79671C0A150A534121 /* StopwatchView.swift in Sources */,
