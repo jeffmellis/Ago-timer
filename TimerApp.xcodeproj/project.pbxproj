@@ -1,0 +1,356 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		21B53E07843A45EED0D37A0A /* TimerAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D173BBC04AB08FF07B69AA23 /* TimerAppApp.swift */; };
+		274AAB79671C0A150A534121 /* StopwatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25311EF70361D54E23EF8AF /* StopwatchView.swift */; };
+		36FB0570CE970A62A02651BB /* StopwatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31538459772F7B8F9E29E5B5 /* StopwatchManager.swift */; };
+		7E5024CD700F1E84F8EA8999 /* EditTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B221D14E3738818B26C6B42A /* EditTimeView.swift */; };
+		8A9F062E353ACCF7504CC056 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425B9315320F0258C4FFA05A /* ContentView.swift */; };
+		8F91851D3B857FFF8AF9C796 /* StopwatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23B328D14BC583EE0D8C96 /* StopwatchModel.swift */; };
+		9816AAC751FF11134D17B2A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA5691DE73029FF4181B3C08 /* Assets.xcassets */; };
+		C6FFBD14E3E03218FE1EE32E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A86A7E464C090EDEBF639197 /* Preview Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		31538459772F7B8F9E29E5B5 /* StopwatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchManager.swift; sourceTree = "<group>"; };
+		3E7366632057BB928B047A07 /* TimerApp Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TimerApp Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		425B9315320F0258C4FFA05A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8E23B328D14BC583EE0D8C96 /* StopwatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchModel.swift; sourceTree = "<group>"; };
+		A86A7E464C090EDEBF639197 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B221D14E3738818B26C6B42A /* EditTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTimeView.swift; sourceTree = "<group>"; };
+		C25311EF70361D54E23EF8AF /* StopwatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchView.swift; sourceTree = "<group>"; };
+		D173BBC04AB08FF07B69AA23 /* TimerAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerAppApp.swift; sourceTree = "<group>"; };
+		FA5691DE73029FF4181B3C08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		18E178C9760995C883C773F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3E7366632057BB928B047A07 /* TimerApp Watch App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		424C6F06EF5612CF79872241 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A86A7E464C090EDEBF639197 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5E4A83B1633035665A92F550 = {
+			isa = PBXGroup;
+			children = (
+				AB3280BB7E8AB91B79E2E9AC /* TimerApp Watch App */,
+				18E178C9760995C883C773F7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AB3280BB7E8AB91B79E2E9AC /* TimerApp Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				FA5691DE73029FF4181B3C08 /* Assets.xcassets */,
+				425B9315320F0258C4FFA05A /* ContentView.swift */,
+				D173BBC04AB08FF07B69AA23 /* TimerAppApp.swift */,
+				C3DA9E8DC7DD01EFC5C18160 /* Models */,
+				424C6F06EF5612CF79872241 /* Preview Content */,
+				CF2C8F0F043C194C5ABB0D6C /* Views */,
+			);
+			path = "TimerApp Watch App";
+			sourceTree = "<group>";
+		};
+		C3DA9E8DC7DD01EFC5C18160 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				31538459772F7B8F9E29E5B5 /* StopwatchManager.swift */,
+				8E23B328D14BC583EE0D8C96 /* StopwatchModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CF2C8F0F043C194C5ABB0D6C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B221D14E3738818B26C6B42A /* EditTimeView.swift */,
+				C25311EF70361D54E23EF8AF /* StopwatchView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B603965F236E7BD4A7FD4977 /* TimerApp Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF862A7792D7D38E78A5CA52 /* Build configuration list for PBXNativeTarget "TimerApp Watch App" */;
+			buildPhases = (
+				EEC9350FC01EA0BB4D29F3B8 /* Sources */,
+				3F9B05CAA0C44294F4E1419A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TimerApp Watch App";
+			packageProductDependencies = (
+			);
+			productName = "TimerApp Watch App";
+			productReference = 3E7366632057BB928B047A07 /* TimerApp Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9D3266CFB84889519B496789 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1640;
+			};
+			buildConfigurationList = 8CB4986186363760952A462B /* Build configuration list for PBXProject "TimerApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 5E4A83B1633035665A92F550;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B603965F236E7BD4A7FD4977 /* TimerApp Watch App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3F9B05CAA0C44294F4E1419A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9816AAC751FF11134D17B2A1 /* Assets.xcassets in Resources */,
+				C6FFBD14E3E03218FE1EE32E /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EEC9350FC01EA0BB4D29F3B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A9F062E353ACCF7504CC056 /* ContentView.swift in Sources */,
+				7E5024CD700F1E84F8EA8999 /* EditTimeView.swift in Sources */,
+				36FB0570CE970A62A02651BB /* StopwatchManager.swift in Sources */,
+				8F91851D3B857FFF8AF9C796 /* StopwatchModel.swift in Sources */,
+				274AAB79671C0A150A534121 /* StopwatchView.swift in Sources */,
+				21B53E07843A45EED0D37A0A /* TimerAppApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		46875E3D98E2E52262FDCB7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		5323889A2C9E95D123E59B5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		5F9BF4D09912A09EDC04B9A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TimerApp Watch App/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = MultiStop;
+				INFOPLIST_KEY_WKApplication = YES;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.multistop;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.multistop.app;
+				PRODUCT_NAME = TimerApp;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Debug;
+		};
+		91654E300DC850B03733921D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TimerApp Watch App/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = MultiStop;
+				INFOPLIST_KEY_WKApplication = YES;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.multistop;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.multistop.app;
+				PRODUCT_NAME = TimerApp;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8CB4986186363760952A462B /* Build configuration list for PBXProject "TimerApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5323889A2C9E95D123E59B5C /* Debug */,
+				46875E3D98E2E52262FDCB7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DF862A7792D7D38E78A5CA52 /* Build configuration list for PBXNativeTarget "TimerApp Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F9BF4D09912A09EDC04B9A8 /* Debug */,
+				91654E300DC850B03733921D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9D3266CFB84889519B496789 /* Project object */;
+}

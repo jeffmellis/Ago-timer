@@ -1,0 +1,36 @@
+name: TimerApp
+options:
+  bundleIdPrefix: com.multistop
+  deploymentTarget:
+    watchOS: "10.0"
+  xcodeVersion: "1640"
+  minimumXcodeGenVersion: "2.38"
+
+targets:
+  TimerApp Watch App:
+    type: application
+    platform: watchOS
+    sources:
+      - path: "TimerApp Watch App"
+        excludes:
+          - Info.plist
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.multistop.app
+        PRODUCT_NAME: TimerApp
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        SWIFT_VERSION: "5.0"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: MultiStop
+        INFOPLIST_KEY_WKApplication: YES
+        INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp: YES
+        INFOPLIST_KEY_WKCompanionAppBundleIdentifier: com.multistop
+        SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD: NO
+      configs:
+        Debug:
+          SWIFT_OPTIMIZATION_LEVEL: "-Onone"
+          SWIFT_ACTIVE_COMPILATION_CONDITIONS: DEBUG
+        Release:
+          SWIFT_OPTIMIZATION_LEVEL: "-O"
