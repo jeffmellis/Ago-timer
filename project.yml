@@ -14,6 +14,10 @@ targets:
       - path: "TimerApp Watch App"
         excludes:
           - Info.plist
+          - "*.entitlements"
+      - path: "Shared"
+    dependencies:
+      - target: TimerApp Widget
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.multistop.app
@@ -28,6 +32,33 @@ targets:
         INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp: YES
         INFOPLIST_KEY_WKCompanionAppBundleIdentifier: com.multistop
         SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD: NO
+        CODE_SIGN_ENTITLEMENTS: "TimerApp Watch App/TimerApp.entitlements"
+      configs:
+        Debug:
+          SWIFT_OPTIMIZATION_LEVEL: "-Onone"
+          SWIFT_ACTIVE_COMPILATION_CONDITIONS: DEBUG
+        Release:
+          SWIFT_OPTIMIZATION_LEVEL: "-O"
+
+  TimerApp Widget:
+    type: app-extension
+    platform: watchOS
+    sources:
+      - path: "TimerApp Widget"
+        excludes:
+          - "*.entitlements"
+          - Info.plist
+      - path: "Shared"
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.multistop.app.widget
+        PRODUCT_NAME: TimerAppWidget
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        SWIFT_VERSION: "5.0"
+        INFOPLIST_FILE: "TimerApp Widget/Info.plist"
+        SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD: NO
+        CODE_SIGN_ENTITLEMENTS: "TimerApp Widget/TimerAppWidget.entitlements"
       configs:
         Debug:
           SWIFT_OPTIMIZATION_LEVEL: "-Onone"

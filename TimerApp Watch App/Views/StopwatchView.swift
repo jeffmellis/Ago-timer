@@ -59,7 +59,7 @@ struct StopwatchView: View {
     }
 
     private var timeDisplay: some View {
-        Text(formatTime(stopwatch.currentTime))
+        Text(formatStopwatchTime(stopwatch.currentTime))
             .font(.system(size: 36, weight: .medium, design: .monospaced))
             .minimumScaleFactor(0.5)
             .lineLimit(1)
@@ -102,18 +102,4 @@ struct StopwatchView: View {
             }
         }
     }
-}
-
-private func formatTime(_ time: TimeInterval) -> String {
-    let clamped = max(0, time)
-    let totalCentiseconds = Int(clamped * 100)
-    let hours = totalCentiseconds / 360000
-    let minutes = (totalCentiseconds % 360000) / 6000
-    let seconds = (totalCentiseconds % 6000) / 100
-    let centiseconds = totalCentiseconds % 100
-
-    if hours > 0 {
-        return String(format: "%d:%02d:%02d.%02d", hours, minutes, seconds, centiseconds)
-    }
-    return String(format: "%02d:%02d.%02d", minutes, seconds, centiseconds)
 }

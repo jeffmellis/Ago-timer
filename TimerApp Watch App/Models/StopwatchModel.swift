@@ -66,4 +66,13 @@ class Stopwatch: Identifiable, ObservableObject {
             pausedAtDate = Date()
         }
     }
+
+    func sharedState() -> SharedStopwatchState {
+        SharedStopwatchState(
+            accumulatedTime: accumulatedTime,
+            isRunning: isRunning,
+            lastStartDate: lastStartDate,
+            name: name
+        )
+    }
 }
