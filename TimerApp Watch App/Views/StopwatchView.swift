@@ -4,25 +4,19 @@ struct StopwatchView: View {
     @ObservedObject var stopwatch: Stopwatch
     @State private var showingEditSheet = false
     @State private var showingNameInput = false
+    @State private var hapticTrigger = 0
+
+    private static let runningGreen = Color(red: 0.35, green: 0.9, blue: 0.45)
 
     var body: some View {
         TimelineView(.animation(minimumInterval: 1.0 / 30.0, paused: !stopwatch.isRunning)) { _ in
             VStack(spacing: 6) {
                 HStack {
-                    if stopwatch.name.isEmpty {
-                        Button(action: { showingNameInput = true }) {
-                            Image(systemName: "tag")
-                                .font(.system(size: 11))
-                        }
-                        .buttonStyle(.plain)
-                        .foregroundStyle(.white)
-                    } else {
-                        Text(stopwatch.name)
-                            .font(.system(size: 12))
-                            .foregroundStyle(.secondary)
-                            .lineLimit(1)
-                            .onTapGesture { showingNameInput = true }
-                    }
+                    Text(stopwatch.name.isEmpty ? "Untitled" : stopwatch.name)
+                        .font(.system(size: 14))
+                        .foregroundStyle(.white.opacity(stopwatch.name.isEmpty ? 0.35 : 0.7))
+                        .lineLimit(1)
+                        .onTapGesture { showingNameInput = true }
                     Spacer()
                 }
 
@@ -31,17 +25,17 @@ struct StopwatchView: View {
                 timeDisplay
 
                 if !stopwatch.isRunning, let pausedDate = stopwatch.pausedAtDate {
-                    HStack(spacing: 4) {
-                        Text("Paused at \(pausedDate.formatted(date: .omitted, time: .shortened))")
-                            .font(.system(size: 11))
-                            .foregroundStyle(.secondary)
-                        Button(action: stopwatch.resumeFromPause) {
+                    Button(action: stopwatch.resumeFromPause) {
+                        HStack(spacing: 4) {
+                            Text("Paused \(pausedDate.formatted(date: .omitted, time: .shortened))")
+                                .font(.system(size: 13))
+                                .foregroundStyle(.secondary)
                             Image(systemName: "arrow.uturn.backward")
-                                .font(.system(size: 10))
+                                .font(.system(size: 11))
+                                .foregroundStyle(.orange)
                         }
-                        .buttonStyle(.plain)
-                        .foregroundStyle(.orange)
                     }
+                    .buttonStyle(.plain)
                 }
 
                 Spacer()
@@ -50,6 +44,7 @@ struct StopwatchView: View {
             }
             .padding(.horizontal, 4)
         }
+        .sensoryFeedback(.impact(flexibility: .solid), trigger: hapticTrigger)
         .sheet(isPresented: $showingEditSheet) {
             EditTimeView(stopwatch: stopwatch)
         }
@@ -60,45 +55,47 @@ struct StopwatchView: View {
 
     private var timeDisplay: some View {
         Text(formatStopwatchTime(stopwatch.currentTime))
-            .font(.system(size: 36, weight: .medium, design: .monospaced))
+            .font(.system(size: 38, weight: .semibold, design: .monospaced))
             .minimumScaleFactor(0.5)
             .lineLimit(1)
-            .foregroundStyle(stopwatch.isRunning ? .green : .primary)
+            .foregroundStyle(stopwatch.isRunning ? Self.runningGreen : .primary)
     }
 
     @ViewBuilder
     private var buttonRow: some View {
         if stopwatch.isRunning {
-            HStack(spacing: 12) {
-                Button(action: stopwatch.pause) {
-                    Image(systemName: "pause.fill")
-                        .font(.title3)
-                        .frame(maxWidth: .infinity)
-                }
-                .tint(.orange)
+            Button(action: { hapticTrigger += 1; stopwatch.pause() }) {
+                Image(systemName: "pause.fill")
+                    .font(.title3)
+                    .frame(maxWidth: .infinity)
             }
+            .tint(.orange)
         } else {
-            HStack(spacing: 12) {
-                if stopwatch.hasTime {
-                    Button(action: stopwatch.reset) {
-                        Image(systemName: "arrow.counterclockwise")
-                            .font(.title3)
-                    }
-                    .tint(.gray)
-                }
-
-                Button(action: stopwatch.start) {
+            VStack(spacing: 6) {
+                Button(action: { hapticTrigger += 1; stopwatch.start() }) {
                     Image(systemName: "play.fill")
                         .font(.title3)
                         .frame(maxWidth: .infinity)
                 }
                 .tint(.green)
 
-                Button(action: { showingEditSheet = true }) {
-                    Image(systemName: "pencil")
-                        .font(.title3)
+                if stopwatch.hasTime {
+                    HStack(spacing: 6) {
+                        Button(action: { hapticTrigger += 1; stopwatch.reset() }) {
+                            Image(systemName: "arrow.counterclockwise")
+                                .font(.title3)
+                                .frame(maxWidth: .infinity)
+                        }
+                        .tint(.gray)
+
+                        Button(action: { showingEditSheet = true }) {
+                            Image(systemName: "pencil")
+                                .font(.title3)
+                                .frame(maxWidth: .infinity)
+                        }
+                        .tint(.gray)
+                    }
                 }
-                .tint(.blue)
             }
         }
     }

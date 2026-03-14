@@ -17,23 +17,23 @@ struct EditTimeView: View {
                             Text("\(h)h").tag(h)
                         }
                     }
-                    .frame(width: 52)
+                    .frame(width: 56)
 
                     Picker("M", selection: $minutes) {
                         ForEach(0..<60, id: \.self) { m in
                             Text("\(m)m").tag(m)
                         }
                     }
-                    .frame(width: 52)
+                    .frame(width: 56)
 
                     Picker("S", selection: $seconds) {
                         ForEach(0..<60, id: \.self) { s in
                             Text("\(s)s").tag(s)
                         }
                     }
-                    .frame(width: 52)
+                    .frame(width: 56)
                 }
-                .frame(height: 80)
+                .frame(height: 100)
 
                 Button("Save") {
                     stopwatch.setTime(hours: hours, minutes: minutes, seconds: seconds)
@@ -42,7 +42,7 @@ struct EditTimeView: View {
                 .buttonStyle(.borderedProminent)
                 .tint(.green)
             }
-            .padding(.top, 4)
+            .padding(.top, 10)
         }
         .onAppear {
             let total = Int(stopwatch.currentTime)

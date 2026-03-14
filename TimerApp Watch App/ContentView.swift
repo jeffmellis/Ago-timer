@@ -20,11 +20,12 @@ struct ContentView: View {
         VStack(spacing: 12) {
             Spacer()
             Button(action: addNewStopwatch) {
-                VStack(spacing: 6) {
+                VStack(spacing: 8) {
                     Image(systemName: "plus.circle.fill")
-                        .font(.system(size: 44))
+                        .font(.system(size: 32))
+                        .opacity(0.6)
                     Text("New Stopwatch")
-                        .font(.footnote)
+                        .font(.system(size: 14))
                 }
             }
             .buttonStyle(.plain)
