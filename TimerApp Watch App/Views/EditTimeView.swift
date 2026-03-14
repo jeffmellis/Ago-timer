@@ -9,40 +9,42 @@ struct EditTimeView: View {
     @State private var seconds = 0
 
     var body: some View {
-        ScrollView {
-            VStack(spacing: 10) {
-                HStack(spacing: 2) {
-                    Picker("H", selection: $hours) {
-                        ForEach(0..<24, id: \.self) { h in
-                            Text("\(h)h").tag(h)
-                        }
-                    }
-                    .frame(width: 56)
+        VStack(spacing: 12) {
+            Spacer()
 
-                    Picker("M", selection: $minutes) {
-                        ForEach(0..<60, id: \.self) { m in
-                            Text("\(m)m").tag(m)
-                        }
+            HStack(spacing: 4) {
+                Picker("H", selection: $hours) {
+                    ForEach(0..<24, id: \.self) { h in
+                        Text("\(h)h").tag(h)
                     }
-                    .frame(width: 56)
-
-                    Picker("S", selection: $seconds) {
-                        ForEach(0..<60, id: \.self) { s in
-                            Text("\(s)s").tag(s)
-                        }
-                    }
-                    .frame(width: 56)
                 }
-                .frame(height: 100)
+                .frame(width: 56)
 
-                Button("Save") {
-                    stopwatch.setTime(hours: hours, minutes: minutes, seconds: seconds)
-                    dismiss()
+                Picker("M", selection: $minutes) {
+                    ForEach(0..<60, id: \.self) { m in
+                        Text("\(m)m").tag(m)
+                    }
                 }
-                .buttonStyle(.borderedProminent)
-                .tint(.green)
+                .frame(width: 56)
+
+                Picker("S", selection: $seconds) {
+                    ForEach(0..<60, id: \.self) { s in
+                        Text("\(s)s").tag(s)
+                    }
+                }
+                .frame(width: 56)
             }
-            .padding(.top, 10)
+            .tint(.green)
+            .frame(height: 100)
+
+            Button(action: {
+                stopwatch.setTime(hours: hours, minutes: minutes, seconds: seconds)
+                dismiss()
+            }) {
+                Text("Save")
+                    .frame(maxWidth: .infinity)
+            }
+            .tint(.green)
         }
         .onAppear {
             let total = Int(stopwatch.currentTime)

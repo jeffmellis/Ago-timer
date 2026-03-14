@@ -8,7 +8,7 @@ struct NameInputView: View {
 
     var body: some View {
         VStack(spacing: 10) {
-            Text("Timer Name")
+            Text("Name")
                 .font(.headline)
 
             TextField("Name", text: $draft)

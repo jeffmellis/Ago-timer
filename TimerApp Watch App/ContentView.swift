@@ -17,19 +17,14 @@ struct ContentView: View {
     }
 
     private var newStopwatchPage: some View {
-        VStack(spacing: 12) {
+        VStack {
             Spacer()
             Button(action: addNewStopwatch) {
-                VStack(spacing: 8) {
-                    Image(systemName: "plus.circle.fill")
-                        .font(.system(size: 32))
-                        .opacity(0.6)
-                    Text("New Stopwatch")
-                        .font(.system(size: 14))
-                }
+                Image(systemName: "plus")
+                    .font(.system(size: 24, weight: .medium))
             }
             .buttonStyle(.plain)
-            .foregroundStyle(.green)
+            .foregroundStyle(.white.opacity(0.3))
             Spacer()
         }
     }

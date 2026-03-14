@@ -5,39 +5,53 @@ struct StopwatchView: View {
     @State private var showingEditSheet = false
     @State private var showingNameInput = false
     @State private var hapticTrigger = 0
-
-    private static let runningGreen = Color(red: 0.35, green: 0.9, blue: 0.45)
+    @State private var timeScale: CGFloat = 1.0
 
     var body: some View {
         TimelineView(.animation(minimumInterval: 1.0 / 30.0, paused: !stopwatch.isRunning)) { _ in
-            VStack(spacing: 6) {
-                HStack {
+            VStack(spacing: 0) {
+                if !stopwatch.isRunning {
                     Text(stopwatch.name.isEmpty ? "Untitled" : stopwatch.name)
-                        .font(.system(size: 14))
-                        .foregroundStyle(.white.opacity(stopwatch.name.isEmpty ? 0.35 : 0.7))
+                        .font(.system(size: 13, weight: .medium))
+                        .foregroundStyle(.white.opacity(stopwatch.name.isEmpty ? 0.2 : 0.5))
                         .lineLimit(1)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                         .onTapGesture { showingNameInput = true }
-                    Spacer()
+                } else if !stopwatch.name.isEmpty {
+                    Text(stopwatch.name)
+                        .font(.system(size: 13, weight: .medium))
+                        .foregroundStyle(.white.opacity(0.5))
+                        .lineLimit(1)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                 }
 
                 Spacer()
 
-                timeDisplay
+                VStack(spacing: 4) {
+                    timeDisplay
+                        .scaleEffect(timeScale)
+                        .onLongPressGesture { showingNameInput = true }
 
-                if !stopwatch.isRunning, let pausedDate = stopwatch.pausedAtDate {
-                    Button(action: stopwatch.resumeFromPause) {
-                        HStack(spacing: 4) {
-                            Text("Paused \(pausedDate.formatted(date: .omitted, time: .shortened))")
-                                .font(.system(size: 13))
-                                .foregroundStyle(.secondary)
-                            Image(systemName: "arrow.uturn.backward")
-                                .font(.system(size: 11))
-                                .foregroundStyle(.orange)
+                    if !stopwatch.isRunning, let pausedDate = stopwatch.pausedAtDate {
+                        Button(action: {
+                            withAnimation(.easeInOut(duration: 0.25)) {
+                                stopwatch.resumeFromPause()
+                            }
+                        }) {
+                            HStack(spacing: 4) {
+                                Text("Paused \(pausedDate.formatted(date: .omitted, time: .shortened))")
+                                    .font(.system(size: 13))
+                                    .foregroundStyle(.white.opacity(0.4))
+                                Image(systemName: "arrow.uturn.backward")
+                                    .font(.system(size: 11))
+                                    .foregroundStyle(.white.opacity(0.6))
+                            }
                         }
+                        .buttonStyle(.plain)
                     }
-                    .buttonStyle(.plain)
                 }
 
+                Spacer()
                 Spacer()
 
                 buttonRow
@@ -53,26 +67,51 @@ struct StopwatchView: View {
         }
     }
 
+    private func timeText() -> Text {
+        let formatted = formatStopwatchTime(stopwatch.currentTime)
+        let weight: Font.Weight = stopwatch.isRunning ? .bold : .light
+        let font = Font.system(size: 42, weight: weight, design: .monospaced)
+        let color: Color = stopwatch.isRunning ? Color(red: 1.0, green: 0.78, blue: 0.28) : Color(white: 0.65)
+
+        if let dotIndex = formatted.lastIndex(of: ".") {
+            let main = String(formatted[..<dotIndex])
+            let frac = String(formatted[dotIndex...])
+            return Text(main).font(font).foregroundColor(color)
+                 + Text(frac).font(font).foregroundColor(color.opacity(0.4))
+        }
+        return Text(formatted).font(font).foregroundColor(color)
+    }
+
     private var timeDisplay: some View {
-        Text(formatStopwatchTime(stopwatch.currentTime))
-            .font(.system(size: 38, weight: .semibold, design: .monospaced))
+        timeText()
             .minimumScaleFactor(0.5)
             .lineLimit(1)
-            .foregroundStyle(stopwatch.isRunning ? Self.runningGreen : .primary)
+            .animation(.easeInOut(duration: 0.3), value: stopwatch.isRunning)
     }
 
     @ViewBuilder
     private var buttonRow: some View {
         if stopwatch.isRunning {
-            Button(action: { hapticTrigger += 1; stopwatch.pause() }) {
+            Button(action: {
+                hapticTrigger += 1
+                withAnimation(.easeInOut(duration: 0.25)) {
+                    stopwatch.pause()
+                }
+            }) {
                 Image(systemName: "pause.fill")
                     .font(.title3)
                     .frame(maxWidth: .infinity)
             }
-            .tint(.orange)
+            .tint(Color(white: 0.35))
+            .transition(.move(edge: .bottom).combined(with: .opacity))
         } else {
             VStack(spacing: 6) {
-                Button(action: { hapticTrigger += 1; stopwatch.start() }) {
+                Button(action: {
+                    hapticTrigger += 1
+                    withAnimation(.easeInOut(duration: 0.25)) {
+                        stopwatch.start()
+                    }
+                }) {
                     Image(systemName: "play.fill")
                         .font(.title3)
                         .frame(maxWidth: .infinity)
@@ -81,7 +120,18 @@ struct StopwatchView: View {
 
                 if stopwatch.hasTime {
                     HStack(spacing: 6) {
-                        Button(action: { hapticTrigger += 1; stopwatch.reset() }) {
+                        Button(action: {
+                            hapticTrigger += 1
+                            withAnimation(.easeIn(duration: 0.15)) {
+                                timeScale = 0.85
+                            }
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+                                stopwatch.reset()
+                                withAnimation(.spring(response: 0.3, dampingFraction: 0.6)) {
+                                    timeScale = 1.0
+                                }
+                            }
+                        }) {
                             Image(systemName: "arrow.counterclockwise")
                                 .font(.title3)
                                 .frame(maxWidth: .infinity)
@@ -95,8 +145,10 @@ struct StopwatchView: View {
                         }
                         .tint(.gray)
                     }
+                    .transition(.move(edge: .bottom).combined(with: .opacity))
                 }
             }
+            .transition(.move(edge: .bottom).combined(with: .opacity))
         }
     }
 }
