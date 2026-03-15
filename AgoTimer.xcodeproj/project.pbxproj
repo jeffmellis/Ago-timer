@@ -9,13 +9,23 @@
 /* Begin PBXBuildFile section */
 		11B373ECDB6A0B4E2AB7AF78 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D760B84F56A20D7EBF02816 /* ContentView.swift */; };
 		13A265D68EFD175D3BE32351 /* AgoTimer Widget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = ED41573AC8BB415C4826DD80 /* AgoTimer Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		28867E96B957591B259C66BD /* TimerRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA846F220418C2CE08716571 /* TimerRowView.swift */; };
 		31B885238B9F858811F96686 /* AgoTimerWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE4768295BB75CAF65CD51A /* AgoTimerWidget.swift */; };
 		39BE856D5E37295CF44C39CB /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16C5D24743374AA29CD572E /* Theme.swift */; };
+		53D329A75CEFEF09C0132783 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C630467232FEA246B90A3AC1 /* Assets.xcassets */; };
+		54681752BA1D6B591BC7F095 /* StopwatchDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D02BCA5EF4E4D29269B04A3 /* StopwatchDetailView.swift */; };
+		590DCCE68A4E2DB8E1A39968 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80B9D218FB4A0FD0EFC19C37 /* Preview Assets.xcassets */; };
+		671569939EF442A1DFAC8285 /* SharedStopwatchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E08E0D616C374BEF9292DF /* SharedStopwatchState.swift */; };
+		6EB7CB590B6D70285828D30F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4047D417AD299A8B939BF2 /* ContentView.swift */; };
+		7C3CE8A36EA80A81F59F9D07 /* StopwatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE92722314C035FA54ED3E6 /* StopwatchManager.swift */; };
 		7CA09C4FA5DC5022B800B98B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D8F7C0F42A99CD28A82CE3D /* Assets.xcassets */; };
 		7CA3A31F170832EE91015860 /* EditTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDBAA13760B10A82D498CB5 /* EditTimeView.swift */; };
+		7E36A6C70B359DDCB47B28E2 /* EditTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A438BF826534B14153365019 /* EditTimeView.swift */; };
 		82D8690976058CB4E9EB8471 /* StopwatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE92722314C035FA54ED3E6 /* StopwatchManager.swift */; };
 		918707273616BDAF044FE5DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBB3FB39EF2620CB2407BC41 /* Assets.xcassets */; };
+		9BED1933B14EC5A16E3F68FE /* StopwatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21EAC215225803877EC8814 /* StopwatchModel.swift */; };
 		A103D32A21B55DCA3F68E6D6 /* SharedStopwatchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E08E0D616C374BEF9292DF /* SharedStopwatchState.swift */; };
+		A6D3063521C7CA84E7DADF7F /* AgoTimerIOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C39C9B1011FDC2BB5872B1 /* AgoTimerIOSApp.swift */; };
 		C06FEB45855CB55277FE8B89 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E51A436BC8591C008242919 /* Preview Assets.xcassets */; };
 		C3C7F39C44481FE683CAA940 /* StopwatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21EAC215225803877EC8814 /* StopwatchModel.swift */; };
 		C3E20C02073395F28E00DB25 /* NameInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E718E2AFC87A56AC745FB0F3 /* NameInputView.swift */; };
@@ -23,6 +33,7 @@
 		D6AB869EA70104ACB0EE4CFF /* StopwatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE92722314C035FA54ED3E6 /* StopwatchManager.swift */; };
 		DB1552D5D8DF48A0349FCBFB /* SharedStopwatchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E08E0D616C374BEF9292DF /* SharedStopwatchState.swift */; };
 		E04ABCE451DF574AB47DA130 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16C5D24743374AA29CD572E /* Theme.swift */; };
+		E2A1B6EA92941CA41F529B43 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16C5D24743374AA29CD572E /* Theme.swift */; };
 		E7B957BE2DCB4633E9409ABC /* AgoTimerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A3424F440637FAD8111D72 /* AgoTimerApp.swift */; };
 		F530A1824EFA9DB6DB6F1105 /* StopwatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21EAC215225803877EC8814 /* StopwatchModel.swift */; };
 /* End PBXBuildFile section */
@@ -56,13 +67,21 @@
 		0E51A436BC8591C008242919 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		10291D3CDE209BD6B5172C24 /* AgoTimer Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AgoTimer Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24E08E0D616C374BEF9292DF /* SharedStopwatchState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStopwatchState.swift; sourceTree = "<group>"; };
+		2F4047D417AD299A8B939BF2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3D760B84F56A20D7EBF02816 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5BE92722314C035FA54ED3E6 /* StopwatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchManager.swift; sourceTree = "<group>"; };
+		6D02BCA5EF4E4D29269B04A3 /* StopwatchDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchDetailView.swift; sourceTree = "<group>"; };
 		6D768619ECAB82A963D36560 /* StopwatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchView.swift; sourceTree = "<group>"; };
 		73A3424F440637FAD8111D72 /* AgoTimerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgoTimerApp.swift; sourceTree = "<group>"; };
 		7D8F7C0F42A99CD28A82CE3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		80B9D218FB4A0FD0EFC19C37 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		890BBAD20A2DF2D97EDD4039 /* AgoTimer iOS App.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = "AgoTimer iOS App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		92C39C9B1011FDC2BB5872B1 /* AgoTimerIOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgoTimerIOSApp.swift; sourceTree = "<group>"; };
+		A438BF826534B14153365019 /* EditTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTimeView.swift; sourceTree = "<group>"; };
 		B21EAC215225803877EC8814 /* StopwatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchModel.swift; sourceTree = "<group>"; };
+		BA846F220418C2CE08716571 /* TimerRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerRowView.swift; sourceTree = "<group>"; };
 		C16C5D24743374AA29CD572E /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		C630467232FEA246B90A3AC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBB3FB39EF2620CB2407BC41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E718E2AFC87A56AC745FB0F3 /* NameInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameInputView.swift; sourceTree = "<group>"; };
 		ED41573AC8BB415C4826DD80 /* AgoTimer Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "AgoTimer Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +109,7 @@
 		60E3408F7869A8402EA55C6C = {
 			isa = PBXGroup;
 			children = (
+				D5B757F0B9E4E5F5D03F45F9 /* AgoTimer iOS App */,
 				9798045F9E8506B78A8A37F6 /* AgoTimer Watch App */,
 				0CA76987C3DDD6AF06EA6C9E /* AgoTimer Widget */,
 				652B08A4A3E6AD0916D8F492 /* Shared */,
@@ -108,9 +128,28 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
+		8545C6BA6C88812BD11AC6D6 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				80B9D218FB4A0FD0EFC19C37 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		86748FAF219745DBB909E6C8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A438BF826534B14153365019 /* EditTimeView.swift */,
+				6D02BCA5EF4E4D29269B04A3 /* StopwatchDetailView.swift */,
+				BA846F220418C2CE08716571 /* TimerRowView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		95BDB7B224711FEE577D5DB2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				890BBAD20A2DF2D97EDD4039 /* AgoTimer iOS App.app */,
 				10291D3CDE209BD6B5172C24 /* AgoTimer Watch App.app */,
 				ED41573AC8BB415C4826DD80 /* AgoTimer Widget.appex */,
 			);
@@ -139,6 +178,18 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		D5B757F0B9E4E5F5D03F45F9 /* AgoTimer iOS App */ = {
+			isa = PBXGroup;
+			children = (
+				92C39C9B1011FDC2BB5872B1 /* AgoTimerIOSApp.swift */,
+				C630467232FEA246B90A3AC1 /* Assets.xcassets */,
+				2F4047D417AD299A8B939BF2 /* ContentView.swift */,
+				8545C6BA6C88812BD11AC6D6 /* Preview Content */,
+				86748FAF219745DBB909E6C8 /* Views */,
+			);
+			path = "AgoTimer iOS App";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -160,6 +211,24 @@
 			);
 			productName = "AgoTimer Watch App";
 			productReference = 10291D3CDE209BD6B5172C24 /* AgoTimer Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		56D3A3896AAE46B7B4B96AD5 /* AgoTimer iOS App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9791D48990B93BD167B0DBB /* Build configuration list for PBXNativeTarget "AgoTimer iOS App" */;
+			buildPhases = (
+				0F130BFC5435AB9CF3C3FB8A /* Sources */,
+				EA2EEACFD62DF230F1419715 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AgoTimer iOS App";
+			packageProductDependencies = (
+			);
+			productName = "AgoTimer iOS App";
+			productReference = 890BBAD20A2DF2D97EDD4039 /* AgoTimer iOS App.app */;
 			productType = "com.apple.product-type.application";
 		};
 		CB8DE8B2568FE00653E1B559 /* AgoTimer Widget */ = {
@@ -205,6 +274,7 @@
 			targets = (
 				30A17B0D137BBFA99653CC81 /* AgoTimer Watch App */,
 				CB8DE8B2568FE00653E1B559 /* AgoTimer Widget */,
+				56D3A3896AAE46B7B4B96AD5 /* AgoTimer iOS App */,
 			);
 		};
 /* End PBXProject section */
@@ -227,9 +297,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EA2EEACFD62DF230F1419715 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53D329A75CEFEF09C0132783 /* Assets.xcassets in Resources */,
+				590DCCE68A4E2DB8E1A39968 /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0F130BFC5435AB9CF3C3FB8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6D3063521C7CA84E7DADF7F /* AgoTimerIOSApp.swift in Sources */,
+				6EB7CB590B6D70285828D30F /* ContentView.swift in Sources */,
+				7E36A6C70B359DDCB47B28E2 /* EditTimeView.swift in Sources */,
+				671569939EF442A1DFAC8285 /* SharedStopwatchState.swift in Sources */,
+				54681752BA1D6B591BC7F095 /* StopwatchDetailView.swift in Sources */,
+				7C3CE8A36EA80A81F59F9D07 /* StopwatchManager.swift in Sources */,
+				9BED1933B14EC5A16E3F68FE /* StopwatchModel.swift in Sources */,
+				E2A1B6EA92941CA41F529B43 /* Theme.swift in Sources */,
+				28867E96B957591B259C66BD /* TimerRowView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8253A7CEF6F0A9F369A285DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -339,10 +434,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
@@ -449,11 +544,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -484,6 +579,55 @@
 			};
 			name = Release;
 		};
+		DB57A13F685C4FA4D71504E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "AgoTimer iOS App/AgoTimer-iOS.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Ago Timer";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.agotimer.ios;
+				PRODUCT_NAME = AgoTimer;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E5F333EFC41311D5FAF24AF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "AgoTimer iOS App/AgoTimer-iOS.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Ago Timer";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.agotimer.ios;
+				PRODUCT_NAME = AgoTimer;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -501,6 +645,15 @@
 			buildConfigurations = (
 				80270AF741A26D4EBAAFD01F /* Debug */,
 				190AC0C70A04C6557DDF7BD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B9791D48990B93BD167B0DBB /* Build configuration list for PBXNativeTarget "AgoTimer iOS App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5F333EFC41311D5FAF24AF5 /* Debug */,
+				DB57A13F685C4FA4D71504E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
