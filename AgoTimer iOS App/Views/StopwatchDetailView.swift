@@ -137,7 +137,7 @@ struct StopwatchDetailView: View {
                                 }
                             }
                         } label: {
-                            Label("Reset", systemImage: "arrow.counterclockwise")
+                            Label("Reset", systemImage: "xmark")
                                 .font(.body.weight(.medium))
                                 .frame(maxWidth: .infinity)
                                 .frame(height: 50)

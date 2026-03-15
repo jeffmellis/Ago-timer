@@ -27,7 +27,7 @@ struct TimerRowView: View {
                             stopwatch.reset()
                         }
                     } label: {
-                        Image(systemName: "arrow.counterclockwise")
+                        Image(systemName: "xmark")
                             .font(.system(size: 14, weight: .semibold))
                             .frame(width: 44, height: 44)
                             .background(AgoTheme.secondaryButton.opacity(0.15))

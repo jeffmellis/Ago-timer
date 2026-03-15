@@ -128,7 +128,7 @@ struct StopwatchView: View {
                                 }
                             }
                         }) {
-                            Image(systemName: "arrow.counterclockwise")
+                            Image(systemName: "xmark")
                                 .font(.title3)
                                 .frame(maxWidth: .infinity)
                         }
