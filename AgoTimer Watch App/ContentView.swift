@@ -24,7 +24,7 @@ struct ContentView: View {
                     .font(.system(size: 24, weight: .medium))
             }
             .buttonStyle(.plain)
-            .foregroundStyle(.white.opacity(0.3))
+            .foregroundStyle(AgoTheme.addButton)
             Spacer()
         }
     }

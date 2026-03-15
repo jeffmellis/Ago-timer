@@ -35,3 +35,13 @@ func formatStopwatchTime(_ time: TimeInterval) -> String {
     }
     return String(format: "%02d:%02d.%02d", minutes, seconds, centiseconds)
 }
+
+/// Seconds-precision format for widgets and compact displays: `H:MM:SS`
+func formatStopwatchTimeCompact(_ time: TimeInterval) -> String {
+    let clamped = max(0, time)
+    let total = Int(clamped)
+    let hours = total / 3600
+    let minutes = (total % 3600) / 60
+    let seconds = total % 60
+    return String(format: "%d:%02d:%02d", hours, minutes, seconds)
+}

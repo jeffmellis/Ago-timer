@@ -34,7 +34,7 @@ struct EditTimeView: View {
                 }
                 .frame(width: 56)
             }
-            .tint(.green)
+            .tint(AgoTheme.confirmAction)
             .frame(height: 100)
 
             Button(action: {
@@ -44,7 +44,7 @@ struct EditTimeView: View {
                 Text("Save")
                     .frame(maxWidth: .infinity)
             }
-            .tint(.green)
+            .tint(AgoTheme.confirmAction)
         }
         .onAppear {
             let total = Int(stopwatch.currentTime)

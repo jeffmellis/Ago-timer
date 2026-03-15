@@ -13,7 +13,7 @@ struct StopwatchView: View {
                 if !stopwatch.name.isEmpty {
                     Text(stopwatch.name)
                         .font(.system(size: 13, weight: .medium))
-                        .foregroundStyle(.white.opacity(0.5))
+                        .foregroundStyle(AgoTheme.nameLabel)
                         .lineLimit(1)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .onTapGesture {
@@ -37,10 +37,10 @@ struct StopwatchView: View {
                             HStack(spacing: 4) {
                                 Text("Paused \(pausedDate.formatted(date: .omitted, time: .shortened))")
                                     .font(.system(size: 13))
-                                    .foregroundStyle(.white.opacity(0.4))
+                                    .foregroundStyle(AgoTheme.pausedLabel)
                                 Image(systemName: "arrow.uturn.backward")
                                     .font(.system(size: 11))
-                                    .foregroundStyle(.white.opacity(0.6))
+                                    .foregroundStyle(AgoTheme.pausedIcon)
                             }
                         }
                         .buttonStyle(.plain)
@@ -67,7 +67,7 @@ struct StopwatchView: View {
         let formatted = formatStopwatchTime(stopwatch.currentTime)
         let weight: Font.Weight = stopwatch.isRunning ? .bold : .light
         let font = Font.system(size: 42, weight: weight, design: .monospaced)
-        let color: Color = stopwatch.isRunning ? Color(red: 1.0, green: 0.78, blue: 0.28) : Color(white: 0.65)
+        let color: Color = stopwatch.isRunning ? AgoTheme.runningTime : AgoTheme.pausedTime
 
         if let dotIndex = formatted.lastIndex(of: ".") {
             let main = String(formatted[..<dotIndex])
@@ -98,7 +98,7 @@ struct StopwatchView: View {
                     .font(.title3)
                     .frame(maxWidth: .infinity)
             }
-            .tint(Color(white: 0.35))
+            .tint(AgoTheme.pauseButton)
             .transition(.move(edge: .bottom).combined(with: .opacity))
         } else {
             VStack(spacing: 6) {
@@ -112,7 +112,7 @@ struct StopwatchView: View {
                         .font(.title3)
                         .frame(maxWidth: .infinity)
                 }
-                .tint(.green)
+                .tint(AgoTheme.playButton)
 
                 if stopwatch.hasTime {
                     HStack(spacing: 6) {
@@ -132,14 +132,14 @@ struct StopwatchView: View {
                                 .font(.title3)
                                 .frame(maxWidth: .infinity)
                         }
-                        .tint(.gray)
+                        .tint(AgoTheme.secondaryButton)
 
                         Button(action: { showingEditSheet = true }) {
                             Image(systemName: "pencil")
                                 .font(.title3)
                                 .frame(maxWidth: .infinity)
                         }
-                        .tint(.gray)
+                        .tint(AgoTheme.secondaryButton)
                     }
                     .transition(.move(edge: .bottom).combined(with: .opacity))
                 }

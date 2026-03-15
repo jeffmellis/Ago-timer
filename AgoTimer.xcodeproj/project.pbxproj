@@ -10,17 +10,21 @@
 		11B373ECDB6A0B4E2AB7AF78 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D760B84F56A20D7EBF02816 /* ContentView.swift */; };
 		13A265D68EFD175D3BE32351 /* AgoTimer Widget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = ED41573AC8BB415C4826DD80 /* AgoTimer Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		31B885238B9F858811F96686 /* AgoTimerWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE4768295BB75CAF65CD51A /* AgoTimerWidget.swift */; };
-		5BA331E7B0454E859BF403FD /* StopwatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91C7A43E34916D6D2829AC2 /* StopwatchModel.swift */; };
+		39BE856D5E37295CF44C39CB /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16C5D24743374AA29CD572E /* Theme.swift */; };
 		7CA09C4FA5DC5022B800B98B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D8F7C0F42A99CD28A82CE3D /* Assets.xcassets */; };
 		7CA3A31F170832EE91015860 /* EditTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDBAA13760B10A82D498CB5 /* EditTimeView.swift */; };
+		82D8690976058CB4E9EB8471 /* StopwatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE92722314C035FA54ED3E6 /* StopwatchManager.swift */; };
 		918707273616BDAF044FE5DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBB3FB39EF2620CB2407BC41 /* Assets.xcassets */; };
 		A103D32A21B55DCA3F68E6D6 /* SharedStopwatchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E08E0D616C374BEF9292DF /* SharedStopwatchState.swift */; };
-		ABE3C80F6DBE84508BAF08A7 /* StopwatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AE9FEABD697C2C51275A8C /* StopwatchManager.swift */; };
 		C06FEB45855CB55277FE8B89 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E51A436BC8591C008242919 /* Preview Assets.xcassets */; };
+		C3C7F39C44481FE683CAA940 /* StopwatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21EAC215225803877EC8814 /* StopwatchModel.swift */; };
 		C3E20C02073395F28E00DB25 /* NameInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E718E2AFC87A56AC745FB0F3 /* NameInputView.swift */; };
 		C8DAF0C085BF741E2D9BC19E /* StopwatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D768619ECAB82A963D36560 /* StopwatchView.swift */; };
+		D6AB869EA70104ACB0EE4CFF /* StopwatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE92722314C035FA54ED3E6 /* StopwatchManager.swift */; };
 		DB1552D5D8DF48A0349FCBFB /* SharedStopwatchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E08E0D616C374BEF9292DF /* SharedStopwatchState.swift */; };
+		E04ABCE451DF574AB47DA130 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16C5D24743374AA29CD572E /* Theme.swift */; };
 		E7B957BE2DCB4633E9409ABC /* AgoTimerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A3424F440637FAD8111D72 /* AgoTimerApp.swift */; };
+		F530A1824EFA9DB6DB6F1105 /* StopwatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21EAC215225803877EC8814 /* StopwatchModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,20 +52,21 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		05AE9FEABD697C2C51275A8C /* StopwatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchManager.swift; sourceTree = "<group>"; };
 		0DE4768295BB75CAF65CD51A /* AgoTimerWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgoTimerWidget.swift; sourceTree = "<group>"; };
 		0E51A436BC8591C008242919 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		10291D3CDE209BD6B5172C24 /* AgoTimer Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AgoTimer Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24E08E0D616C374BEF9292DF /* SharedStopwatchState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStopwatchState.swift; sourceTree = "<group>"; };
 		3D760B84F56A20D7EBF02816 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5BE92722314C035FA54ED3E6 /* StopwatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchManager.swift; sourceTree = "<group>"; };
 		6D768619ECAB82A963D36560 /* StopwatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchView.swift; sourceTree = "<group>"; };
 		73A3424F440637FAD8111D72 /* AgoTimerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgoTimerApp.swift; sourceTree = "<group>"; };
 		7D8F7C0F42A99CD28A82CE3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B21EAC215225803877EC8814 /* StopwatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchModel.swift; sourceTree = "<group>"; };
+		C16C5D24743374AA29CD572E /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		DBB3FB39EF2620CB2407BC41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E718E2AFC87A56AC745FB0F3 /* NameInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameInputView.swift; sourceTree = "<group>"; };
 		ED41573AC8BB415C4826DD80 /* AgoTimer Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "AgoTimer Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEDBAA13760B10A82D498CB5 /* EditTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTimeView.swift; sourceTree = "<group>"; };
-		F91C7A43E34916D6D2829AC2 /* StopwatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -96,17 +101,11 @@
 			isa = PBXGroup;
 			children = (
 				24E08E0D616C374BEF9292DF /* SharedStopwatchState.swift */,
+				5BE92722314C035FA54ED3E6 /* StopwatchManager.swift */,
+				B21EAC215225803877EC8814 /* StopwatchModel.swift */,
+				C16C5D24743374AA29CD572E /* Theme.swift */,
 			);
 			path = Shared;
-			sourceTree = "<group>";
-		};
-		8ED8C9C8AE6D17587685DA61 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				05AE9FEABD697C2C51275A8C /* StopwatchManager.swift */,
-				F91C7A43E34916D6D2829AC2 /* StopwatchModel.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		95BDB7B224711FEE577D5DB2 /* Products */ = {
@@ -124,7 +123,6 @@
 				73A3424F440637FAD8111D72 /* AgoTimerApp.swift */,
 				DBB3FB39EF2620CB2407BC41 /* Assets.xcassets */,
 				3D760B84F56A20D7EBF02816 /* ContentView.swift */,
-				8ED8C9C8AE6D17587685DA61 /* Models */,
 				15A00051B5D2DA713068B7AB /* Preview Content */,
 				A7C52753B0E36404BC757963 /* Views */,
 			);
@@ -238,6 +236,9 @@
 			files = (
 				31B885238B9F858811F96686 /* AgoTimerWidget.swift in Sources */,
 				DB1552D5D8DF48A0349FCBFB /* SharedStopwatchState.swift in Sources */,
+				82D8690976058CB4E9EB8471 /* StopwatchManager.swift in Sources */,
+				F530A1824EFA9DB6DB6F1105 /* StopwatchModel.swift in Sources */,
+				39BE856D5E37295CF44C39CB /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,9 +251,10 @@
 				7CA3A31F170832EE91015860 /* EditTimeView.swift in Sources */,
 				C3E20C02073395F28E00DB25 /* NameInputView.swift in Sources */,
 				A103D32A21B55DCA3F68E6D6 /* SharedStopwatchState.swift in Sources */,
-				ABE3C80F6DBE84508BAF08A7 /* StopwatchManager.swift in Sources */,
-				5BA331E7B0454E859BF403FD /* StopwatchModel.swift in Sources */,
+				D6AB869EA70104ACB0EE4CFF /* StopwatchManager.swift in Sources */,
+				C3C7F39C44481FE683CAA940 /* StopwatchModel.swift in Sources */,
 				C8DAF0C085BF741E2D9BC19E /* StopwatchView.swift in Sources */,
+				E04ABCE451DF574AB47DA130 /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,14 +19,14 @@ struct NameInputView: View {
                         name = ""
                         dismiss()
                     }
-                    .tint(.red)
+                    .tint(AgoTheme.destructiveAction)
                 }
 
                 Button("Save") {
                     name = draft
                     dismiss()
                 }
-                .tint(.green)
+                .tint(AgoTheme.confirmAction)
             }
         }
         .onAppear { draft = name }

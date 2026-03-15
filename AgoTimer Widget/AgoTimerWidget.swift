@@ -16,7 +16,7 @@ struct StopwatchTimelineProvider: TimelineProvider {
     func getSnapshot(in context: Context, completion: @escaping (StopwatchEntry) -> Void) {
         let state = SharedStopwatchState.load()
         let time = computeTime(for: state, at: .now)
-        completion(StopwatchEntry(date: .now, displayTime: formatComplicationTime(time), name: state?.name ?? "", isRunning: state?.isRunning ?? false))
+        completion(StopwatchEntry(date: .now, displayTime: formatStopwatchTimeCompact(time), name: state?.name ?? "", isRunning: state?.isRunning ?? false))
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<StopwatchEntry>) -> Void) {
@@ -29,13 +29,13 @@ struct StopwatchTimelineProvider: TimelineProvider {
             for offset in 0..<60 {
                 let entryDate = now.addingTimeInterval(Double(offset))
                 let time = computeTime(for: state, at: entryDate)
-                entries.append(StopwatchEntry(date: entryDate, displayTime: formatComplicationTime(time), name: state?.name ?? "", isRunning: true))
+                entries.append(StopwatchEntry(date: entryDate, displayTime: formatStopwatchTimeCompact(time), name: state?.name ?? "", isRunning: true))
             }
             let timeline = Timeline(entries: entries, policy: .after(now.addingTimeInterval(55)))
             completion(timeline)
         } else {
             let time = computeTime(for: state, at: .now)
-            let entry = StopwatchEntry(date: .now, displayTime: formatComplicationTime(time), name: state?.name ?? "", isRunning: false)
+            let entry = StopwatchEntry(date: .now, displayTime: formatStopwatchTimeCompact(time), name: state?.name ?? "", isRunning: false)
             let timeline = Timeline(entries: [entry], policy: .after(Date().addingTimeInterval(900)))
             completion(timeline)
         }
@@ -69,15 +69,6 @@ struct StopwatchWidgetView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
     }
-}
-
-private func formatComplicationTime(_ time: TimeInterval) -> String {
-    let clamped = max(0, time)
-    let total = Int(clamped)
-    let hours = total / 3600
-    let minutes = (total % 3600) / 60
-    let seconds = total % 60
-    return String(format: "%d:%02d:%02d", hours, minutes, seconds)
 }
 
 @main
