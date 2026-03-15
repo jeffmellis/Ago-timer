@@ -26,7 +26,6 @@ struct StopwatchView: View {
                 VStack(spacing: 4) {
                     timeDisplay
                         .scaleEffect(timeScale)
-                        .onLongPressGesture { showingNameInput = true }
 
                     if !stopwatch.isRunning, let pausedDate = stopwatch.pausedAtDate {
                         Button(action: {
