@@ -120,9 +120,11 @@ struct StopwatchDetailView: View {
                         .font(.title3.weight(.semibold))
                         .frame(maxWidth: .infinity)
                         .frame(height: 56)
+                        .background(AgoTheme.playButton.opacity(0.2))
+                        .foregroundStyle(AgoTheme.playButton)
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
                 }
-                .buttonStyle(.borderedProminent)
-                .tint(AgoTheme.playButton)
+                .buttonStyle(.borderless)
 
                 if stopwatch.hasTime {
                     HStack(spacing: 12) {
