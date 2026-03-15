@@ -10,6 +10,7 @@ enum AgoTheme {
 
     // MARK: - Buttons
     static let playButton = Color.green
+    static let resumeButton = accent
     static let pauseButton = Color(white: 0.35)
     static let secondaryButton = Color.gray
 

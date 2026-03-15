@@ -16,22 +16,10 @@ struct StopwatchDetailView: View {
                     .scaleEffect(timeScale)
 
                 if !stopwatch.isRunning, let pausedDate = stopwatch.pausedAtDate {
-                    Button {
-                        withAnimation(.easeInOut(duration: 0.25)) {
-                            stopwatch.resumeFromPause()
-                        }
-                    } label: {
-                        HStack(spacing: 6) {
-                            Text("Paused \(pausedDate.formatted(date: .omitted, time: .shortened))")
-                                .font(.subheadline)
-                                .foregroundStyle(.secondary)
-                            Image(systemName: "arrow.uturn.backward")
-                                .font(.caption)
-                                .foregroundStyle(.tertiary)
-                        }
-                    }
-                    .buttonStyle(.plain)
-                    .padding(.top, 8)
+                    Text("Paused \(pausedDate.formatted(date: .omitted, time: .shortened))")
+                        .font(.title3)
+                        .foregroundStyle(.secondary)
+                        .padding(.top, 8)
                 }
 
                 Spacer()
@@ -111,20 +99,54 @@ struct StopwatchDetailView: View {
             .transition(.move(edge: .bottom).combined(with: .opacity))
         } else {
             VStack(spacing: 12) {
-                Button {
-                    withAnimation(.easeInOut(duration: 0.25)) {
-                        stopwatch.start()
+                if stopwatch.pausedAtDate != nil {
+                    HStack(spacing: 12) {
+                        Button {
+                            withAnimation(.easeInOut(duration: 0.25)) {
+                                stopwatch.start()
+                            }
+                        } label: {
+                            Label("Start", systemImage: "play.fill")
+                                .font(.title3.weight(.semibold))
+                                .frame(maxWidth: .infinity)
+                                .frame(height: 56)
+                                .background(AgoTheme.playButton.opacity(0.2))
+                                .foregroundStyle(AgoTheme.playButton)
+                                .clipShape(RoundedRectangle(cornerRadius: 12))
+                        }
+                        .buttonStyle(.borderless)
+
+                        Button {
+                            withAnimation(.easeInOut(duration: 0.25)) {
+                                stopwatch.resumeFromPause()
+                            }
+                        } label: {
+                            Label("Resume", systemImage: "clock.arrow.circlepath")
+                                .font(.title3.weight(.semibold))
+                                .frame(maxWidth: .infinity)
+                                .frame(height: 56)
+                                .background(AgoTheme.resumeButton.opacity(0.2))
+                                .foregroundStyle(AgoTheme.resumeButton)
+                                .clipShape(RoundedRectangle(cornerRadius: 12))
+                        }
+                        .buttonStyle(.borderless)
                     }
-                } label: {
-                    Label("Start", systemImage: "play.fill")
-                        .font(.title3.weight(.semibold))
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 56)
-                        .background(AgoTheme.playButton.opacity(0.2))
-                        .foregroundStyle(AgoTheme.playButton)
-                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                } else {
+                    Button {
+                        withAnimation(.easeInOut(duration: 0.25)) {
+                            stopwatch.start()
+                        }
+                    } label: {
+                        Label("Start", systemImage: "play.fill")
+                            .font(.title3.weight(.semibold))
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 56)
+                            .background(AgoTheme.playButton.opacity(0.2))
+                            .foregroundStyle(AgoTheme.playButton)
+                            .clipShape(RoundedRectangle(cornerRadius: 12))
+                    }
+                    .buttonStyle(.borderless)
                 }
-                .buttonStyle(.borderless)
 
                 if stopwatch.hasTime {
                     HStack(spacing: 12) {

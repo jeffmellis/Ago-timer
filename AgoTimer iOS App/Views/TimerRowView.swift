@@ -44,12 +44,12 @@ struct TimerRowView: View {
                             stopwatch.resumeFromPause()
                         }
                     } label: {
-                        Image(systemName: "arrow.uturn.backward")
+                        Image(systemName: "clock.arrow.circlepath")
                             .font(.system(size: 14, weight: .semibold))
                             .frame(width: 44, height: 44)
-                            .background(AgoTheme.accent.opacity(0.15))
+                            .background(AgoTheme.resumeButton.opacity(0.15))
                             .clipShape(Circle())
-                            .foregroundStyle(AgoTheme.accent)
+                            .foregroundStyle(AgoTheme.resumeButton)
                     }
                     .buttonStyle(.borderless)
                     .transition(.scale.combined(with: .opacity))

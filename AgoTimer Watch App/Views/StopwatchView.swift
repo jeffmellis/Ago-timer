@@ -28,21 +28,9 @@ struct StopwatchView: View {
                         .scaleEffect(timeScale)
 
                     if !stopwatch.isRunning, let pausedDate = stopwatch.pausedAtDate {
-                        Button(action: {
-                            withAnimation(.easeInOut(duration: 0.25)) {
-                                stopwatch.resumeFromPause()
-                            }
-                        }) {
-                            HStack(spacing: 4) {
-                                Text("Paused \(pausedDate.formatted(date: .omitted, time: .shortened))")
-                                    .font(.system(size: 13))
-                                    .foregroundStyle(AgoTheme.pausedLabel)
-                                Image(systemName: "arrow.uturn.backward")
-                                    .font(.system(size: 11))
-                                    .foregroundStyle(AgoTheme.pausedIcon)
-                            }
-                        }
-                        .buttonStyle(.plain)
+                        Text("Paused \(pausedDate.formatted(date: .omitted, time: .shortened))")
+                            .font(.system(size: 13))
+                            .foregroundStyle(AgoTheme.pausedLabel)
                     }
                 }
 
@@ -101,17 +89,45 @@ struct StopwatchView: View {
             .transition(.move(edge: .bottom).combined(with: .opacity))
         } else {
             VStack(spacing: 6) {
-                Button(action: {
-                    hapticTrigger += 1
-                    withAnimation(.easeInOut(duration: 0.25)) {
-                        stopwatch.start()
+                if stopwatch.pausedAtDate != nil {
+                    HStack(spacing: 6) {
+                        Button(action: {
+                            hapticTrigger += 1
+                            withAnimation(.easeInOut(duration: 0.25)) {
+                                stopwatch.start()
+                            }
+                        }) {
+                            Image(systemName: "play.fill")
+                                .font(.title3)
+                                .frame(maxWidth: .infinity)
+                        }
+                        .tint(AgoTheme.playButton)
+
+                        Button(action: {
+                            hapticTrigger += 1
+                            withAnimation(.easeInOut(duration: 0.25)) {
+                                stopwatch.resumeFromPause()
+                            }
+                        }) {
+                            Image(systemName: "clock.arrow.circlepath")
+                                .font(.title3)
+                                .frame(maxWidth: .infinity)
+                        }
+                        .tint(AgoTheme.resumeButton)
                     }
-                }) {
-                    Image(systemName: "play.fill")
-                        .font(.title3)
-                        .frame(maxWidth: .infinity)
+                } else {
+                    Button(action: {
+                        hapticTrigger += 1
+                        withAnimation(.easeInOut(duration: 0.25)) {
+                            stopwatch.start()
+                        }
+                    }) {
+                        Image(systemName: "play.fill")
+                            .font(.title3)
+                            .frame(maxWidth: .infinity)
+                    }
+                    .tint(AgoTheme.playButton)
                 }
-                .tint(AgoTheme.playButton)
 
                 if stopwatch.hasTime {
                     HStack(spacing: 6) {
