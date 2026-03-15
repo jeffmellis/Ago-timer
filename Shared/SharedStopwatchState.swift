@@ -6,7 +6,7 @@ struct SharedStopwatchState: Codable {
     var lastStartDate: Date?
     var name: String
 
-    static let suiteName = "group.com.multistop.shared"
+    static let suiteName = "group.com.agotimer.shared"
     static let key = "selectedStopwatchState"
 
     static func load() -> SharedStopwatchState? {

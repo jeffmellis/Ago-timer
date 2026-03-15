@@ -81,8 +81,8 @@ private func formatComplicationTime(_ time: TimeInterval) -> String {
 }
 
 @main
-struct TimerAppWidget: Widget {
-    let kind = "TimerAppWidget"
+struct AgoTimerWidget: Widget {
+    let kind = "AgoTimerWidget"
 
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: StopwatchTimelineProvider()) { entry in

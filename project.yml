@@ -1,38 +1,38 @@
-name: TimerApp
+name: AgoTimer
 options:
-  bundleIdPrefix: com.multistop
+  bundleIdPrefix: com.agotimer
   deploymentTarget:
     watchOS: "10.0"
   xcodeVersion: "1640"
   minimumXcodeGenVersion: "2.38"
 
 targets:
-  TimerApp Watch App:
+  AgoTimer Watch App:
     type: application
     platform: watchOS
     sources:
-      - path: "TimerApp Watch App"
+      - path: "AgoTimer Watch App"
         excludes:
           - Info.plist
           - "*.entitlements"
       - path: "Shared"
     dependencies:
-      - target: TimerApp Widget
+      - target: AgoTimer Widget
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.multistop.app
-        PRODUCT_NAME: TimerApp
+        PRODUCT_BUNDLE_IDENTIFIER: com.agotimer.app
+        PRODUCT_NAME: AgoTimer
         MARKETING_VERSION: "1.0"
         CURRENT_PROJECT_VERSION: "1"
         SWIFT_VERSION: "5.0"
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         GENERATE_INFOPLIST_FILE: YES
-        INFOPLIST_KEY_CFBundleDisplayName: MultiStop
+        INFOPLIST_KEY_CFBundleDisplayName: Ago Timer
         INFOPLIST_KEY_WKApplication: YES
         INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp: YES
-        INFOPLIST_KEY_WKCompanionAppBundleIdentifier: com.multistop
+        INFOPLIST_KEY_WKCompanionAppBundleIdentifier: com.agotimer
         SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD: NO
-        CODE_SIGN_ENTITLEMENTS: "TimerApp Watch App/TimerApp.entitlements"
+        CODE_SIGN_ENTITLEMENTS: "AgoTimer Watch App/AgoTimer.entitlements"
       configs:
         Debug:
           SWIFT_OPTIMIZATION_LEVEL: "-Onone"
@@ -40,25 +40,25 @@ targets:
         Release:
           SWIFT_OPTIMIZATION_LEVEL: "-O"
 
-  TimerApp Widget:
+  AgoTimer Widget:
     type: app-extension
     platform: watchOS
     sources:
-      - path: "TimerApp Widget"
+      - path: "AgoTimer Widget"
         excludes:
           - "*.entitlements"
           - Info.plist
       - path: "Shared"
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.multistop.app.widget
-        PRODUCT_NAME: TimerAppWidget
+        PRODUCT_BUNDLE_IDENTIFIER: com.agotimer.app.widget
+        PRODUCT_NAME: AgoTimerWidget
         MARKETING_VERSION: "1.0"
         CURRENT_PROJECT_VERSION: "1"
         SWIFT_VERSION: "5.0"
-        INFOPLIST_FILE: "TimerApp Widget/Info.plist"
+        INFOPLIST_FILE: "AgoTimer Widget/Info.plist"
         SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD: NO
-        CODE_SIGN_ENTITLEMENTS: "TimerApp Widget/TimerAppWidget.entitlements"
+        CODE_SIGN_ENTITLEMENTS: "AgoTimer Widget/AgoTimerWidget.entitlements"
       configs:
         Debug:
           SWIFT_OPTIMIZATION_LEVEL: "-Onone"

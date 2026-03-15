@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct TimerAppApp: App {
+struct AgoTimerApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

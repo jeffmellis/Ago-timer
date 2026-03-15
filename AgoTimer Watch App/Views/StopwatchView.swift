@@ -10,19 +10,15 @@ struct StopwatchView: View {
     var body: some View {
         TimelineView(.animation(minimumInterval: 1.0 / 30.0, paused: !stopwatch.isRunning)) { _ in
             VStack(spacing: 0) {
-                if !stopwatch.isRunning {
-                    Text(stopwatch.name.isEmpty ? "Untitled" : stopwatch.name)
-                        .font(.system(size: 13, weight: .medium))
-                        .foregroundStyle(.white.opacity(stopwatch.name.isEmpty ? 0.2 : 0.5))
-                        .lineLimit(1)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .onTapGesture { showingNameInput = true }
-                } else if !stopwatch.name.isEmpty {
+                if !stopwatch.name.isEmpty {
                     Text(stopwatch.name)
                         .font(.system(size: 13, weight: .medium))
                         .foregroundStyle(.white.opacity(0.5))
                         .lineLimit(1)
                         .frame(maxWidth: .infinity, alignment: .leading)
+                        .onTapGesture {
+                            if !stopwatch.isRunning { showingNameInput = true }
+                        }
                 }
 
                 Spacer()

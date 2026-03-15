@@ -1,4 +1,4 @@
-# MultiStop — watchOS Stopwatch App
+# Ago Timer — watchOS Stopwatch App
 
 A standalone watchOS stopwatch app with support for multiple concurrent stopwatches, editable time, and pause-aware display. Built with SwiftUI.
 
@@ -10,8 +10,8 @@ A standalone watchOS stopwatch app with support for multiple concurrent stopwatc
 
 ## Running the App
 
-1. Open `TimerApp.xcodeproj` in Xcode.
-2. Select the **TimerApp Watch App** scheme.
+1. Open `AgoTimer.xcodeproj` in Xcode.
+2. Select the **AgoTimer Watch App** scheme.
 3. Choose an Apple Watch simulator (e.g. Apple Watch Series 10 46mm).
 4. Hit **Run** (Cmd+R).
 
@@ -27,8 +27,8 @@ xcodegen generate
 ## Project Structure
 
 ```
-TimerApp Watch App/
-├── TimerAppApp.swift          # App entry point (@main)
+AgoTimer Watch App/
+├── AgoTimerApp.swift          # App entry point (@main)
 ├── ContentView.swift          # Root view — vertical-paging TabView
 ├── Models/
 │   ├── StopwatchModel.swift   # Single stopwatch: timing logic & state
