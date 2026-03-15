@@ -1,5 +1,14 @@
 import Foundation
 
+struct StopwatchSnapshot: Codable {
+    let id: UUID
+    var accumulatedTime: TimeInterval
+    var isRunning: Bool
+    var lastStartDate: Date?
+    var pausedAtDate: Date?
+    var name: String
+}
+
 class Stopwatch: Identifiable, ObservableObject {
     let id: UUID
     @Published var name: String = ""
@@ -74,5 +83,24 @@ class Stopwatch: Identifiable, ObservableObject {
             lastStartDate: lastStartDate,
             name: name
         )
+    }
+
+    func snapshot() -> StopwatchSnapshot {
+        StopwatchSnapshot(
+            id: id,
+            accumulatedTime: accumulatedTime,
+            isRunning: isRunning,
+            lastStartDate: lastStartDate,
+            pausedAtDate: pausedAtDate,
+            name: name
+        )
+    }
+
+    func apply(_ snapshot: StopwatchSnapshot) {
+        accumulatedTime = snapshot.accumulatedTime
+        isRunning = snapshot.isRunning
+        lastStartDate = snapshot.lastStartDate
+        pausedAtDate = snapshot.pausedAtDate
+        name = snapshot.name
     }
 }

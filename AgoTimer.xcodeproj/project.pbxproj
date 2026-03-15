@@ -10,6 +10,7 @@
 		11B373ECDB6A0B4E2AB7AF78 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D760B84F56A20D7EBF02816 /* ContentView.swift */; };
 		13A265D68EFD175D3BE32351 /* AgoTimer Widget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = ED41573AC8BB415C4826DD80 /* AgoTimer Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		28867E96B957591B259C66BD /* TimerRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA846F220418C2CE08716571 /* TimerRowView.swift */; };
+		2C41F6B4796C0EB46A56A971 /* SyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC91CA924B846D3E4E7C088E /* SyncManager.swift */; };
 		31B885238B9F858811F96686 /* AgoTimerWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE4768295BB75CAF65CD51A /* AgoTimerWidget.swift */; };
 		39BE856D5E37295CF44C39CB /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16C5D24743374AA29CD572E /* Theme.swift */; };
 		53D329A75CEFEF09C0132783 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C630467232FEA246B90A3AC1 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 		7E36A6C70B359DDCB47B28E2 /* EditTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A438BF826534B14153365019 /* EditTimeView.swift */; };
 		82D8690976058CB4E9EB8471 /* StopwatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE92722314C035FA54ED3E6 /* StopwatchManager.swift */; };
 		918707273616BDAF044FE5DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBB3FB39EF2620CB2407BC41 /* Assets.xcassets */; };
+		920F192C9962DB33CD55BC09 /* SyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC91CA924B846D3E4E7C088E /* SyncManager.swift */; };
 		9BED1933B14EC5A16E3F68FE /* StopwatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21EAC215225803877EC8814 /* StopwatchModel.swift */; };
 		A103D32A21B55DCA3F68E6D6 /* SharedStopwatchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E08E0D616C374BEF9292DF /* SharedStopwatchState.swift */; };
 		A6D3063521C7CA84E7DADF7F /* AgoTimerIOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C39C9B1011FDC2BB5872B1 /* AgoTimerIOSApp.swift */; };
@@ -30,6 +32,7 @@
 		C3C7F39C44481FE683CAA940 /* StopwatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21EAC215225803877EC8814 /* StopwatchModel.swift */; };
 		C3E20C02073395F28E00DB25 /* NameInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E718E2AFC87A56AC745FB0F3 /* NameInputView.swift */; };
 		C8DAF0C085BF741E2D9BC19E /* StopwatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D768619ECAB82A963D36560 /* StopwatchView.swift */; };
+		D415F58F9B01086449077740 /* SyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC91CA924B846D3E4E7C088E /* SyncManager.swift */; };
 		D6AB869EA70104ACB0EE4CFF /* StopwatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE92722314C035FA54ED3E6 /* StopwatchManager.swift */; };
 		DB1552D5D8DF48A0349FCBFB /* SharedStopwatchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E08E0D616C374BEF9292DF /* SharedStopwatchState.swift */; };
 		E04ABCE451DF574AB47DA130 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16C5D24743374AA29CD572E /* Theme.swift */; };
@@ -78,6 +81,7 @@
 		890BBAD20A2DF2D97EDD4039 /* AgoTimer iOS App.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = "AgoTimer iOS App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C39C9B1011FDC2BB5872B1 /* AgoTimerIOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgoTimerIOSApp.swift; sourceTree = "<group>"; };
 		A438BF826534B14153365019 /* EditTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTimeView.swift; sourceTree = "<group>"; };
+		AC91CA924B846D3E4E7C088E /* SyncManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncManager.swift; sourceTree = "<group>"; };
 		B21EAC215225803877EC8814 /* StopwatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchModel.swift; sourceTree = "<group>"; };
 		BA846F220418C2CE08716571 /* TimerRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerRowView.swift; sourceTree = "<group>"; };
 		C16C5D24743374AA29CD572E /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 				24E08E0D616C374BEF9292DF /* SharedStopwatchState.swift */,
 				5BE92722314C035FA54ED3E6 /* StopwatchManager.swift */,
 				B21EAC215225803877EC8814 /* StopwatchModel.swift */,
+				AC91CA924B846D3E4E7C088E /* SyncManager.swift */,
 				C16C5D24743374AA29CD572E /* Theme.swift */,
 			);
 			path = Shared;
@@ -320,6 +325,7 @@
 				54681752BA1D6B591BC7F095 /* StopwatchDetailView.swift in Sources */,
 				7C3CE8A36EA80A81F59F9D07 /* StopwatchManager.swift in Sources */,
 				9BED1933B14EC5A16E3F68FE /* StopwatchModel.swift in Sources */,
+				D415F58F9B01086449077740 /* SyncManager.swift in Sources */,
 				E2A1B6EA92941CA41F529B43 /* Theme.swift in Sources */,
 				28867E96B957591B259C66BD /* TimerRowView.swift in Sources */,
 			);
@@ -333,6 +339,7 @@
 				DB1552D5D8DF48A0349FCBFB /* SharedStopwatchState.swift in Sources */,
 				82D8690976058CB4E9EB8471 /* StopwatchManager.swift in Sources */,
 				F530A1824EFA9DB6DB6F1105 /* StopwatchModel.swift in Sources */,
+				2C41F6B4796C0EB46A56A971 /* SyncManager.swift in Sources */,
 				39BE856D5E37295CF44C39CB /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,6 +356,7 @@
 				D6AB869EA70104ACB0EE4CFF /* StopwatchManager.swift in Sources */,
 				C3C7F39C44481FE683CAA940 /* StopwatchModel.swift in Sources */,
 				C8DAF0C085BF741E2D9BC19E /* StopwatchView.swift in Sources */,
+				920F192C9962DB33CD55BC09 /* SyncManager.swift in Sources */,
 				E04ABCE451DF574AB47DA130 /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
